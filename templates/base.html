@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>A* Route-Finder</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="div2" id="loading_overlay"> <div class="loader"></div> </div>
+        <div class="div1" id="map"> </div>
+        <div class="div6" id="route"> 
+           <h3>Directions</h3>
+        </div>
+        <div class="div3" id="nodes"> </div>
+        <div class="div4" id="address_list"> 
+            <form id="resolve_address">
+                <label for="search">Address Search:</label>
+                <input name="search" id="search" type="text" placeholder="Enter Address Here">
+                <button id="address_submit" type="submit">Search</button>
+            </form>
+            
+            <div id="results"> </div>
+            <button class="blue-btn hide" id="request_route"> Search </button>
+            <button class="reset hide" id="reset" onclick="location.reload()"> Reset </button>
+        </div>
+        
+    </div>
+</body>
+</html>
